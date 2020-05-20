@@ -9,9 +9,11 @@ body {
   background: #6495ED;
   background-size: auto 100vh; 
   font-family: 'Oswald', sans-serif;
+  color: #FFA07A;
   height: 100vh;
   font-size: 12px;
 }
+
 
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
 @media (min-width: 400px) {
@@ -35,7 +37,7 @@ body {
 }
 
 header {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +47,8 @@ header {
   background-color: #4169E1;
   position: fixed;
   width: 100vw;
-  top: 0;
+  top: 0em;
+  z-index: 1;
 }
 
 .menu ul {
@@ -58,9 +61,15 @@ header {
 }
 
 .menu a {
-  
   display: block;
   padding: 10px 20px;
+  transition: background-color, color, 0.30s;
+}
+
+.menu a:active,
+.menu a:hover{
+  background-color:  #FFA07A;
+  color: #4169E1;
 }
 
 a {
@@ -68,9 +77,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
 
 .site-subtitle, 
 .site-title {
@@ -91,25 +97,54 @@ a:hover {
 
 .sobre {
   padding: 2em;
-  height: 25vh;
+  min-height: 30vh;
+  width: 100vw;
+  justify-content: center;
+  align-content: center;
 }
 
 .sobre h2 {
   font-family: 'Kanit', sans-serif;;
-  color: #4169E1;
-  margin-bottom: 0.25em;
+  color:#FFA07A;
+  text-shadow: 1.90px 1.90px 2px #FF7F50 ;
+  margin-bottom: 0.5em;
   font-size: 2em;
+}
+
+.sobre .texto {
+background-color: #6495ED;
+border: 2px solid #FFA07A ;
+text-align: justify;
+text-indent: 1.5em;
+border-radius: 15px;
+padding: 5px;
+}
+
+.sobre a { 
+  color: #FA8072;
 }
 
 .portfolio {
   padding: 2em;
-  height: 100vh;
+  min-height: 80vh;
+}
+
+.contato{
+  padding: 2em;
+  min-height: 50vh;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio h2 {
   font-family: 'Kanit', sans-serif;;
-  color: #4169E1;
+  color: #FFA07A;
+  text-shadow: 1.90px 1.90px 2px #FF7F50 ;
   margin-bottom: 2em;
+  margin-top: 2em;
   font-size: 2em;
 }
 
@@ -125,6 +160,7 @@ a:hover {
     height: calc(100vh - 7em - 48px);
     justify-content: center;
     align-content: center;
+    
   }
 }
 
@@ -134,9 +170,18 @@ a:hover {
     align-content: center;
     justify-content: center;
     height: calc(100vh - 7em - 48px);
+    font-size: 1.25em;
   }
 }
 
+@media (min-width: 1195px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(4, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(70vh - 7em - 48px);
+  }
+}
 .portfolio figure {
   text-align: center;
 }
@@ -149,4 +194,41 @@ a:hover {
   border-radius: 60px;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  transition: transform 0.30s;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.05);
+  
+}
+
+.contato h2 {
+  font-family: 'Kanit', sans-serif;;
+  color: #FFA07A;
+  text-shadow: 1.90px 1.90px 2px #FF7F50 ;
+  margin-bottom: 0.75em;
+  margin-top: 2em;
+  font-size: 2em;
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a{ 
+  color: #FFA07A;
+  font-size: 6em;
+  transition: text-shadow 0.30s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 2.75px 2.75px 6px #FF7F50 ;
+}
+
+.contato .grid-icons {
+  display: grid;
+  gap: 2em;
+  border: 1.5em;
 }

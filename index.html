@@ -6,31 +6,37 @@
     <title>Ricardo Bock</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=Kanit:wght@300&family=Oswald&display=swap" rel="stylesheet">  
+    <script src="https://kit.fontawesome.com/a316b4e20c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav class="menu">
-          <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contato</a></li>
+          <ul class="container">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <div>
+        <div class=titulo>
           <h1 class="site-title">Ricardo Bock</h1>
           <h2 class="site-subtitle">Acadêmico de Engenharia Química</h2>
           <h2 class="site-subtitle">Programador Jr</h2>
-       
         </div>
         
       </header>
 <section>
-  <section class="sobre">
+  <section class="sobre container" id="sobre">
     <h2>Sobre</h2>
-    <p>Olá!</p>
-    <p>Meu nome é Ricardo Bock Camargo, tenho 21 anos e sou atualmente estudante de Engenharia Química, aqui você vai encontrar meus principais projetos em que vou desenvolver ao longo do ano, e neles incluem o aprendizado em programação, o aprofundamento na linguagem python, desenvolvimento em mobile focado em educação, e relatos de como é uma graduação de Engenharia Química. </p>
+    <div class="texto">
+      <p>
+        Olá! Meu nome é Ricardo Bock Camargo, tenho 21 anos e sou atualmente estudante de Engenharia Química pela Univali, aqui você vai encontrar meus principais projetos em que vou desenvolver ao longo do ano, e neles incluem o aprendizado em programação, o aprofundamento na linguagem python, desenvolvimento em mobile focado em educação, e relatos de como é uma graduação de Engenharia Química. 
+      </p>
+      <p>
+        Este site foi inteiramente feito na <a href="https://www.alura.com.br/imersao-css"> Imersão CSS na alura!</a>
+        </p>
+    </div>
 </section>
-      <section class="portfolio">
+      <section class="portfolio container" id="projetos">
         <h2>Projetos</h2>
         <div class="grid">
           <figure>
@@ -50,6 +56,26 @@
           <figcaption>Engenharia Química</figcaption>
         </figure>
       </div>
+      </section>
+      <section class="contato container" id="contato">
+        <h2>Contato</h2>
+        <div class="grid icons">
+          <a target="_blank" href="https://github.com/RicardoBock">
+            <i class="fab fa-github"></i>
+          </a>
+          <a target="_blank" href="https://twitter.com/hojeachapavai">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/ricardo-bock-camargo-b9374316b/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:ricardobockamargo@gmail.com">
+            <i class="fas fa-envelope-square"></i>
+            <a target="_blank" href="https://www.instagram.com/ricardobockc/">
+              <i class="fab fa-instagram-square"></i>
+            
+          </a>
+        </div>
       </section>
     
 </body>
